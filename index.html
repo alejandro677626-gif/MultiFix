@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTIFIX | Burgos Servicios Múltiples</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --text: #e0e0e0;
+            --accent: #c0c0c0;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        header {
+            background: rgba(10,10,10,0.95);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #222;
+        }
+        .logo {
+            font-size: 1.9rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: white;
+        }
+        nav a {
+            color: var(--accent);
+            margin-left: 30px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        nav a:hover { color: white; }
+
+        /* HERO - Como en tu imagen */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            background: linear-gradient(rgba(0,0,0,0.92), rgba(0,0,0,0.92));
+        }
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+        .hero .subtitle {
+            font-size: 1.6rem;
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+        .hero .services-list {
+            font-size: 1.25rem;
+            margin-bottom: 50px;
+            color: var(--accent);
+        }
+        .btn {
+            background: white;
+            color: black;
+            padding: 16px 50px;
+            font-size: 1.15rem;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #ddd;
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 100px 8%;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 60px;
+        }
+
+        /* Servicios */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: #1a1a1a;
+            padding: 40px 25px;
+            text-align: center;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+        .service-card:hover {
+            border-color: #666;
+            transform: translateY(-8px);
+        }
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Contacto */
+        .contact {
+            background: #111;
+            text-align: center;
+        }
+        .contact-info {
+            font-size: 1.3rem;
+            margin: 30px 0;
+        }
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #050505;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.95rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">MULTIFIX</div>
+    <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<!-- HERO - Exactamente como tu última imagen -->
+<section class="hero" id="inicio">
+    <h1>MULTIFIX</h1>
+    <p class="subtitle">Burgos Servicios Múltiples</p>
+    <p class="services-list">
+        Reparaciones • Mantenimiento • Fontanería • Electricidad
+    </p>
+    <button class="btn" onclick="window.open('https://wa.me/526641234567', '_blank')">
+        Solicitar cotización ahora
+    </button>
+</section>
+
+<!-- NOSOTROS -->
+<section id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.2rem; color: #ccc;">
+        MULTIFIX es una empresa especializada en servicios técnicos integrales para hogar e industria. 
+        Ofrecemos soluciones profesionales, rápidas y confiables en reparaciones, mantenimiento, 
+        fontanería y electricidad. Un solo proveedor para todas sus necesidades técnicas en Tijuana y zona metropolitana.
+    </p>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" style="background: #111;">
+    <h2>Nuestros Servicios</h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Fontanería</h3>
+            <p>Instalación y reparación de tuberías, fugas, llaves, calentadores, drenajes y sistemas hidráulicos.</p>
+        </div>
+        <div class="service-card">
+            <h3>Electricidad</h3>
+            <p>Instalaciones eléctricas, reparación de cortos, iluminación, tableros, interruptores y mantenimiento preventivo.</p>
+        </div>
+        <div class="service-card">
+            <h3>Mantenimiento General</h3>
+            <p>Mantenimiento integral de viviendas, locales comerciales y edificios. Prevención y corrección de fallas.</p>
+        </div>
+        <div class="service-card">
+            <h3>Reparaciones Varias</h3>
+            <p>Arreglos generales, soluciones rápidas, carpintería ligera y trabajos técnicos diversos.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="contact">
+    <h2>Contáctanos</h2>
+    <div class="contact-info">
+        📍 Tijuana, Baja California<br><br>
+        📱 WhatsApp / Teléfono: <a href="https://wa.me/526643678034">+52 664 367 8034</a><br><br>
+        ✉️ info@multifixburgos.mx
+    </div>
+    <button class="btn" style="font-size: 1.3rem; padding: 18px 60px;" 
+            onclick="window.open('https://wa.me/526643678034?text=Hola%20MULTIFIX%2C%20quiero%20una%20cotizaci%C3%B3n', '_blank')">
+        Enviar mensaje por WhatsApp
+    </button>
+</section>
+
+<footer>
+    <p>&copy; 2026 MULTIFIX – Burgos Servicios Múltiples. Todos los derechos reservados.</p>
+    <p>Servicio profesional • Respuesta rápida • Garantía en todos los trabajos</p>
+</footer>
+
+</body>
+</html>
